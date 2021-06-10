@@ -11,6 +11,5 @@ install:
 before script:
   - pylint --version
 
-script:
-  - pylint main.py
+script: pylint main.py
 
