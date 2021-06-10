@@ -1,7 +1,7 @@
 ---
 language: python
 
-python: "3.7"
+python: "3.7", "3.8", "3.9"
  
 install: 
   - pip install pylint
@@ -10,7 +10,5 @@ before script:
   - pylint --version
 
 script:
-  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
-  - chmod u+x build-package.sh
-  - ./build-package.sh
+  - pylint main.py
 
