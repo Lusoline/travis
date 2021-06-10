@@ -6,4 +6,11 @@ python: "3.7"
 install: 
   - pip install pylint
 
-script: pytest
+before script:
+  - pylint --version
+
+script:
+  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
+  - chmod u+x build-package.sh
+  - ./build-package.sh
+
